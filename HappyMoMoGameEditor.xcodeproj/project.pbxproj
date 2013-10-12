@@ -1,0 +1,480 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6B6D15FD1809221800A9C2D7 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B6D15FC1809221800A9C2D7 /* Cocoa.framework */; };
+		6B6D16071809221800A9C2D7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6B6D16051809221800A9C2D7 /* InfoPlist.strings */; };
+		6B6D16091809221800A9C2D7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B6D16081809221800A9C2D7 /* main.m */; };
+		6B6D160D1809221800A9C2D7 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 6B6D160B1809221800A9C2D7 /* Credits.rtf */; };
+		6B6D16101809221800A9C2D7 /* WZWAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B6D160F1809221800A9C2D7 /* WZWAppDelegate.m */; };
+		6B6D16131809221800A9C2D7 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B6D16111809221800A9C2D7 /* MainMenu.xib */; };
+		6B6D16151809221800A9C2D7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B6D16141809221800A9C2D7 /* Images.xcassets */; };
+		6B6D161C1809221800A9C2D7 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B6D161B1809221800A9C2D7 /* XCTest.framework */; };
+		6B6D161D1809221800A9C2D7 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B6D15FC1809221800A9C2D7 /* Cocoa.framework */; };
+		6B6D16251809221800A9C2D7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6B6D16231809221800A9C2D7 /* InfoPlist.strings */; };
+		6B6D16271809221800A9C2D7 /* HappyMoMoGameEditorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B6D16261809221800A9C2D7 /* HappyMoMoGameEditorTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6B6D161E1809221800A9C2D7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6B6D15F11809221800A9C2D7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6B6D15F81809221800A9C2D7;
+			remoteInfo = HappyMoMoGameEditor;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		6B6D15F91809221800A9C2D7 /* HappyMoMoGameEditor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HappyMoMoGameEditor.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B6D15FC1809221800A9C2D7 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		6B6D15FF1809221800A9C2D7 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		6B6D16001809221800A9C2D7 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		6B6D16011809221800A9C2D7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		6B6D16041809221800A9C2D7 /* HappyMoMoGameEditor-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HappyMoMoGameEditor-Info.plist"; sourceTree = "<group>"; };
+		6B6D16061809221800A9C2D7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		6B6D16081809221800A9C2D7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6B6D160A1809221800A9C2D7 /* HappyMoMoGameEditor-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HappyMoMoGameEditor-Prefix.pch"; sourceTree = "<group>"; };
+		6B6D160C1809221800A9C2D7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		6B6D160E1809221800A9C2D7 /* WZWAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WZWAppDelegate.h; sourceTree = "<group>"; };
+		6B6D160F1809221800A9C2D7 /* WZWAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WZWAppDelegate.m; sourceTree = "<group>"; };
+		6B6D16121809221800A9C2D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		6B6D16141809221800A9C2D7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		6B6D161A1809221800A9C2D7 /* HappyMoMoGameEditorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HappyMoMoGameEditorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B6D161B1809221800A9C2D7 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		6B6D16221809221800A9C2D7 /* HappyMoMoGameEditorTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HappyMoMoGameEditorTests-Info.plist"; sourceTree = "<group>"; };
+		6B6D16241809221800A9C2D7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		6B6D16261809221800A9C2D7 /* HappyMoMoGameEditorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HappyMoMoGameEditorTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6B6D15F61809221800A9C2D7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B6D15FD1809221800A9C2D7 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6B6D16171809221800A9C2D7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B6D161D1809221800A9C2D7 /* Cocoa.framework in Frameworks */,
+				6B6D161C1809221800A9C2D7 /* XCTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6B6D15F01809221800A9C2D7 = {
+			isa = PBXGroup;
+			children = (
+				6B6D16021809221800A9C2D7 /* HappyMoMoGameEditor */,
+				6B6D16201809221800A9C2D7 /* HappyMoMoGameEditorTests */,
+				6B6D15FB1809221800A9C2D7 /* Frameworks */,
+				6B6D15FA1809221800A9C2D7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6B6D15FA1809221800A9C2D7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6B6D15F91809221800A9C2D7 /* HappyMoMoGameEditor.app */,
+				6B6D161A1809221800A9C2D7 /* HappyMoMoGameEditorTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6B6D15FB1809221800A9C2D7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6B6D15FC1809221800A9C2D7 /* Cocoa.framework */,
+				6B6D161B1809221800A9C2D7 /* XCTest.framework */,
+				6B6D15FE1809221800A9C2D7 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6B6D15FE1809221800A9C2D7 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6B6D15FF1809221800A9C2D7 /* AppKit.framework */,
+				6B6D16001809221800A9C2D7 /* CoreData.framework */,
+				6B6D16011809221800A9C2D7 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		6B6D16021809221800A9C2D7 /* HappyMoMoGameEditor */ = {
+			isa = PBXGroup;
+			children = (
+				6B6D160E1809221800A9C2D7 /* WZWAppDelegate.h */,
+				6B6D160F1809221800A9C2D7 /* WZWAppDelegate.m */,
+				6B6D16111809221800A9C2D7 /* MainMenu.xib */,
+				6B6D16141809221800A9C2D7 /* Images.xcassets */,
+				6B6D16031809221800A9C2D7 /* Supporting Files */,
+			);
+			path = HappyMoMoGameEditor;
+			sourceTree = "<group>";
+		};
+		6B6D16031809221800A9C2D7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6B6D16041809221800A9C2D7 /* HappyMoMoGameEditor-Info.plist */,
+				6B6D16051809221800A9C2D7 /* InfoPlist.strings */,
+				6B6D16081809221800A9C2D7 /* main.m */,
+				6B6D160A1809221800A9C2D7 /* HappyMoMoGameEditor-Prefix.pch */,
+				6B6D160B1809221800A9C2D7 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6B6D16201809221800A9C2D7 /* HappyMoMoGameEditorTests */ = {
+			isa = PBXGroup;
+			children = (
+				6B6D16261809221800A9C2D7 /* HappyMoMoGameEditorTests.m */,
+				6B6D16211809221800A9C2D7 /* Supporting Files */,
+			);
+			path = HappyMoMoGameEditorTests;
+			sourceTree = "<group>";
+		};
+		6B6D16211809221800A9C2D7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6B6D16221809221800A9C2D7 /* HappyMoMoGameEditorTests-Info.plist */,
+				6B6D16231809221800A9C2D7 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6B6D15F81809221800A9C2D7 /* HappyMoMoGameEditor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6B6D162A1809221900A9C2D7 /* Build configuration list for PBXNativeTarget "HappyMoMoGameEditor" */;
+			buildPhases = (
+				6B6D15F51809221800A9C2D7 /* Sources */,
+				6B6D15F61809221800A9C2D7 /* Frameworks */,
+				6B6D15F71809221800A9C2D7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HappyMoMoGameEditor;
+			productName = HappyMoMoGameEditor;
+			productReference = 6B6D15F91809221800A9C2D7 /* HappyMoMoGameEditor.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6B6D16191809221800A9C2D7 /* HappyMoMoGameEditorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6B6D162D1809221900A9C2D7 /* Build configuration list for PBXNativeTarget "HappyMoMoGameEditorTests" */;
+			buildPhases = (
+				6B6D16161809221800A9C2D7 /* Sources */,
+				6B6D16171809221800A9C2D7 /* Frameworks */,
+				6B6D16181809221800A9C2D7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6B6D161F1809221800A9C2D7 /* PBXTargetDependency */,
+			);
+			name = HappyMoMoGameEditorTests;
+			productName = HappyMoMoGameEditorTests;
+			productReference = 6B6D161A1809221800A9C2D7 /* HappyMoMoGameEditorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6B6D15F11809221800A9C2D7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = WZW;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "王 昭威";
+				TargetAttributes = {
+					6B6D16191809221800A9C2D7 = {
+						TestTargetID = 6B6D15F81809221800A9C2D7;
+					};
+				};
+			};
+			buildConfigurationList = 6B6D15F41809221800A9C2D7 /* Build configuration list for PBXProject "HappyMoMoGameEditor" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6B6D15F01809221800A9C2D7;
+			productRefGroup = 6B6D15FA1809221800A9C2D7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6B6D15F81809221800A9C2D7 /* HappyMoMoGameEditor */,
+				6B6D16191809221800A9C2D7 /* HappyMoMoGameEditorTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6B6D15F71809221800A9C2D7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B6D16071809221800A9C2D7 /* InfoPlist.strings in Resources */,
+				6B6D16151809221800A9C2D7 /* Images.xcassets in Resources */,
+				6B6D160D1809221800A9C2D7 /* Credits.rtf in Resources */,
+				6B6D16131809221800A9C2D7 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6B6D16181809221800A9C2D7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B6D16251809221800A9C2D7 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6B6D15F51809221800A9C2D7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B6D16091809221800A9C2D7 /* main.m in Sources */,
+				6B6D16101809221800A9C2D7 /* WZWAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6B6D16161809221800A9C2D7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B6D16271809221800A9C2D7 /* HappyMoMoGameEditorTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6B6D161F1809221800A9C2D7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6B6D15F81809221800A9C2D7 /* HappyMoMoGameEditor */;
+			targetProxy = 6B6D161E1809221800A9C2D7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6B6D16051809221800A9C2D7 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6B6D16061809221800A9C2D7 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		6B6D160B1809221800A9C2D7 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6B6D160C1809221800A9C2D7 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		6B6D16111809221800A9C2D7 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6B6D16121809221800A9C2D7 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		6B6D16231809221800A9C2D7 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6B6D16241809221800A9C2D7 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6B6D16281809221900A9C2D7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		6B6D16291809221900A9C2D7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		6B6D162B1809221900A9C2D7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HappyMoMoGameEditor/HappyMoMoGameEditor-Prefix.pch";
+				INFOPLIST_FILE = "HappyMoMoGameEditor/HappyMoMoGameEditor-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		6B6D162C1809221900A9C2D7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HappyMoMoGameEditor/HappyMoMoGameEditor-Prefix.pch";
+				INFOPLIST_FILE = "HappyMoMoGameEditor/HappyMoMoGameEditor-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		6B6D162E1809221900A9C2D7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/HappyMoMoGameEditor.app/Contents/MacOS/HappyMoMoGameEditor";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HappyMoMoGameEditor/HappyMoMoGameEditor-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "HappyMoMoGameEditorTests/HappyMoMoGameEditorTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		6B6D162F1809221900A9C2D7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/HappyMoMoGameEditor.app/Contents/MacOS/HappyMoMoGameEditor";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HappyMoMoGameEditor/HappyMoMoGameEditor-Prefix.pch";
+				INFOPLIST_FILE = "HappyMoMoGameEditorTests/HappyMoMoGameEditorTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6B6D15F41809221800A9C2D7 /* Build configuration list for PBXProject "HappyMoMoGameEditor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6B6D16281809221900A9C2D7 /* Debug */,
+				6B6D16291809221900A9C2D7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6B6D162A1809221900A9C2D7 /* Build configuration list for PBXNativeTarget "HappyMoMoGameEditor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6B6D162B1809221900A9C2D7 /* Debug */,
+				6B6D162C1809221900A9C2D7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		6B6D162D1809221900A9C2D7 /* Build configuration list for PBXNativeTarget "HappyMoMoGameEditorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6B6D162E1809221900A9C2D7 /* Debug */,
+				6B6D162F1809221900A9C2D7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6B6D15F11809221800A9C2D7 /* Project object */;
+}
