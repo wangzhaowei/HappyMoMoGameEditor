@@ -18,6 +18,9 @@
 		6B6D161D1809221800A9C2D7 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B6D15FC1809221800A9C2D7 /* Cocoa.framework */; };
 		6B6D16251809221800A9C2D7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6B6D16231809221800A9C2D7 /* InfoPlist.strings */; };
 		6B6D16271809221800A9C2D7 /* HappyMoMoGameEditorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B6D16261809221800A9C2D7 /* HappyMoMoGameEditorTests.m */; };
+		6B6D163218092B0F00A9C2D7 /* WZWGameData.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B6D163118092B0F00A9C2D7 /* WZWGameData.m */; };
+		6B6D163518092B7E00A9C2D7 /* WZWMission.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B6D163418092B7E00A9C2D7 /* WZWMission.m */; };
+		6B6D163D1809337700A9C2D7 /* WZWXMLChain.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B6D163C1809337700A9C2D7 /* WZWXMLChain.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +53,12 @@
 		6B6D16221809221800A9C2D7 /* HappyMoMoGameEditorTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HappyMoMoGameEditorTests-Info.plist"; sourceTree = "<group>"; };
 		6B6D16241809221800A9C2D7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6B6D16261809221800A9C2D7 /* HappyMoMoGameEditorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HappyMoMoGameEditorTests.m; sourceTree = "<group>"; };
+		6B6D163018092B0F00A9C2D7 /* WZWGameData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WZWGameData.h; sourceTree = "<group>"; };
+		6B6D163118092B0F00A9C2D7 /* WZWGameData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WZWGameData.m; sourceTree = "<group>"; };
+		6B6D163318092B7E00A9C2D7 /* WZWMission.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WZWMission.h; sourceTree = "<group>"; };
+		6B6D163418092B7E00A9C2D7 /* WZWMission.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WZWMission.m; sourceTree = "<group>"; };
+		6B6D163B1809337700A9C2D7 /* WZWXMLChain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WZWXMLChain.h; sourceTree = "<group>"; };
+		6B6D163C1809337700A9C2D7 /* WZWXMLChain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WZWXMLChain.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +126,12 @@
 			children = (
 				6B6D160E1809221800A9C2D7 /* WZWAppDelegate.h */,
 				6B6D160F1809221800A9C2D7 /* WZWAppDelegate.m */,
+				6B6D163B1809337700A9C2D7 /* WZWXMLChain.h */,
+				6B6D163C1809337700A9C2D7 /* WZWXMLChain.m */,
+				6B6D163018092B0F00A9C2D7 /* WZWGameData.h */,
+				6B6D163118092B0F00A9C2D7 /* WZWGameData.m */,
+				6B6D163318092B7E00A9C2D7 /* WZWMission.h */,
+				6B6D163418092B7E00A9C2D7 /* WZWMission.m */,
 				6B6D16111809221800A9C2D7 /* MainMenu.xib */,
 				6B6D16141809221800A9C2D7 /* Images.xcassets */,
 				6B6D16031809221800A9C2D7 /* Supporting Files */,
@@ -254,6 +269,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				6B6D16091809221800A9C2D7 /* main.m in Sources */,
+				6B6D163D1809337700A9C2D7 /* WZWXMLChain.m in Sources */,
+				6B6D163518092B7E00A9C2D7 /* WZWMission.m in Sources */,
+				6B6D163218092B0F00A9C2D7 /* WZWGameData.m in Sources */,
 				6B6D16101809221800A9C2D7 /* WZWAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
