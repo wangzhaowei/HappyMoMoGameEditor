@@ -10,10 +10,14 @@
 #import "WZWXMLChain.h"
 #import "WZWMission.h"
 
+extern const int totalScoreCount;
+
 //  一个GameData就是游戏中的一关
 @interface WZWGameData : WZWXMLChain
 
+//  数组长度等于totalScoreCount
+@property (assign) float* totalScore;
 //  mission 就是关卡中的题目，一个mission就是一个题目, 存储的是WZWMission类的对象
-@property (copy) NSMutableArray* missions;
+@property (copy) NSArray* missions;
 
 @end

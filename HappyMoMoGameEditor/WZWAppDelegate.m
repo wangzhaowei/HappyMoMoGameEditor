@@ -14,17 +14,7 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
     // Insert code here to initialize your application
-    NSArray* facials = [NSArray arrayWithObjects:@1, @2, @3, nil];
-    WZWMission* mission = [[WZWMission alloc] initWithScore:0.5f
-                                                 timeLimite:3.0f
-                                                    facials:facials
-                                                   sequence:NO
-                                                 totalCount:3
-                                                obstruction:nil
-                                                  titleFile:@"sampleImg.png"
-                                                  barEncode:0];
-    NSXMLElement* elem = [mission createXMLElement];
-    NSLog(@"%@", [elem description]);
+
 //    NSXMLElement* elem = [NSXMLNode elementWithName:@"test"];
 //    [elem setObjectValue:@"123123"];
 //    
