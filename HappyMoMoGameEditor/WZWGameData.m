@@ -19,4 +19,24 @@
     return self;
 }
 
+- (NSXMLElement *)elemValueWithElemKey:(NSString *)elemKey
+{
+    if ([elemKey isEqualToString:@"_missions"]) {
+        NSXMLElement* subroot = [NSXMLElement elementWithName:elemKey];
+        if (subroot == nil) {
+            @throw [NSException exceptionWithName:@"subroot error" reason:@"subroot is nil" userInfo:nil];
+        }
+        
+        [self.missions enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+            if ([obj isKindOfClass:[WZWXMLChain class]]) {
+                [subroot addChild:[obj createXMLElement]];
+            }
+        }];
+        
+        return subroot;
+    }
+    
+    return [super elemValueWithElemKey:elemKey];
+}
+
 @end

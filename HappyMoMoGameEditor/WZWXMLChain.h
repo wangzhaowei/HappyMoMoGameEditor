@@ -20,6 +20,6 @@
 
 //  这个方法返回对象的key的value, 一般情况下返回NSString
 //  当对象是WZWXMLChain时, 返回的是NSXMLElement
-- (id)elemValueWithElemKey:(NSString*)elemKey;
+- (NSXMLElement*)elemValueWithElemKey:(NSString*)elemKey;
 
 @end

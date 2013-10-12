@@ -26,16 +26,22 @@
     WZWGameData* gameData = [[WZWGameData alloc] init];
     gameData.missions = nil;
     
+    NSMutableArray* missions = [NSMutableArray arrayWithCapacity:3u];
     NSArray* facials = [NSArray arrayWithObjects:@1, @2, @3, nil];
+    
+    for (int i = 0; i < 3; i++) {
     self.mission = [[WZWMission alloc] initWithScore:0.5f
                                           timeLimite:3.0f
                                              facials:facials
                                             sequence:NO
                                           totalCount:3
                                          obstruction:nil
-                                           titleFile:@"sampleImg.png"];
+                                           titleFile:@"sampleImg.png"
+                                           barEncode:0];
+    [missions addObject:self.mission];
+    }
     
-    gameData.mission = self.mission;
+    gameData.missions = missions;
     self.gameData = gameData;
 }
 
@@ -61,7 +67,7 @@
 
 - (void)testExample
 {
-    XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
+//    XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
 }
 
 @end

@@ -22,12 +22,15 @@
         @throw [NSException exceptionWithName:@"root key error" reason:@"root key is nil" userInfo:nil];
     }
     NSXMLElement* root = [NSXMLElement elementWithName:rootKey];
-    return [self createXMLElementWithIvarList:instanceVar
+    root = [self createXMLElementWithIvarList:instanceVar
                                     ivarCount:outCount
                                   rootElement:root];
+    
+    free(instanceVar);
+    return root;
 }
 
-- (id)elemValueWithElemKey:(NSString *)elemKey
+- (NSXMLElement*)elemValueWithElemKey:(NSString *)elemKey
 {
     id var = [self valueForKey:elemKey];
     NSXMLElement* elem = nil;

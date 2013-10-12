@@ -14,7 +14,6 @@
 @interface WZWGameData : WZWXMLChain
 
 //  mission 就是关卡中的题目，一个mission就是一个题目, 存储的是WZWMission类的对象
-@property (strong) NSMutableArray* missions;
-@property (strong) WZWMission* mission;
+@property (copy) NSMutableArray* missions;
 
 @end

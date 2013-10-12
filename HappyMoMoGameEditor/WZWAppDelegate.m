@@ -21,7 +21,8 @@
                                                    sequence:NO
                                                  totalCount:3
                                                 obstruction:nil
-                                                  titleFile:@"sampleImg.png"];
+                                                  titleFile:@"sampleImg.png"
+                                                  barEncode:0];
     NSXMLElement* elem = [mission createXMLElement];
     NSLog(@"%@", [elem description]);
 //    NSXMLElement* elem = [NSXMLNode elementWithName:@"test"];
