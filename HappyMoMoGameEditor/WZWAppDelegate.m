@@ -30,4 +30,7 @@
 //    [xmlData writeToFile:[NSHomeDirectory() stringByAppendingString:@"/test.xml"] atomically:YES];
 }
 
+- (IBAction)fileMenuCallBack:(id)sender {
+    NSLog(@"%ld", [sender tag]);
+}
 @end

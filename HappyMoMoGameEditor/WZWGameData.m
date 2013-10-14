@@ -7,6 +7,7 @@
 //
 
 #import "WZWGameData.h"
+#import "NSNumber+WZWXMLEncode.h"
 
 const int totalScoreCount = 3;
 
@@ -16,13 +17,8 @@ const int totalScoreCount = 3;
 {
     self = [super init];
     if (self) {
-        _totalScore = (float*)malloc(sizeof(float) * 3);
-        if (_totalScore == nil) {
-            return nil;
-        }
-        for (int i = 0; i < totalScoreCount; i++) {
-            _totalScore[i] = 0.f;
-        }
+        _scoreLevelCount = 0;
+        _totalScores = nil;
         
         self.rootKey = @"gameData";
     }
@@ -31,40 +27,37 @@ const int totalScoreCount = 3;
 
 - (NSXMLElement *)elemValueWithElemKey:(NSString *)elemKey
 {
-    if ([elemKey isEqualToString:@"_missions"]) {
-        NSXMLElement* subroot = [NSXMLElement elementWithName:elemKey];
-        if (subroot == nil) {
-            @throw [NSException exceptionWithName:@"subroot error" reason:@"subroot is nil" userInfo:nil];
+    NSXMLElement* elem = nil;
+    if ([elemKey isEqualToString:@"_missions"] || [elemKey isEqualToString:@"_totalScores"]) {
+        //  舍弃字符串最后的s
+        NSString* subElemKey = [elemKey substringWithRange:NSMakeRange(0, elemKey.length - 1)];
+        @try {
+            elem = [self encodeArrayToXMLElement:self.missions
+                                      elementKey:subElemKey];
+        }
+        @catch (NSException *exception) {
+            NSLog(@"%@", [exception description]);
+            elem = nil;
+        }
+        @finally {
+            elem = nil;
         }
         
-        [self.missions enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-            if ([obj isKindOfClass:[WZWXMLChain class]]) {
-                [subroot addChild:[obj createXMLElement]];
-            }
-        }];
-        
-        return subroot;
+        return elem;
     }
     
-    if ([elemKey isEqualToString:@"_totalScore"]) {
-        NSMutableString* totalScoreStr = [NSMutableString string];
-        for (int i = 0; i < totalScoreCount; i++) {
-            [totalScoreStr appendFormat:@"%f,", self.totalScore[i]];
+    if ([elemKey isEqualToString:@"_scoreLevelCount"]) {
+        elem = [NSXMLElement elementWithName:elemKey];
+        if (elem == nil) {
+            @throw [NSException exceptionWithName:@"elem error" reason:@"elem ptr is nil" userInfo:nil];
         }
-        NSString* resultStr = [totalScoreStr substringWithRange:NSMakeRange(0, totalScoreStr.length - 1)];
-        NSXMLElement* elem = [NSXMLElement elementWithName:elemKey];
-        [elem setObjectValue:resultStr];
+        NSNumber* scoreLevelCountNumber = [self valueForKey:elemKey];
+        [elem setObjectValue:[scoreLevelCountNumber createXMLElement]];
         
         return elem;
     }
     
     return [super elemValueWithElemKey:elemKey];
-}
-
-- (void)dealloc
-{
-    free(_totalScore);
-    _totalScore = NULL;
 }
 
 @end

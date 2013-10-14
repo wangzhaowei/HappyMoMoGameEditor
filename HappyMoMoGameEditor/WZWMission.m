@@ -29,13 +29,32 @@
     return self;
 }
 
-- (id)elemValueWithElemKey:(NSString *)elemKey
+- (NSXMLElement*)elemValueWithElemKey:(NSString *)elemKey
 {
+    NSXMLElement* elem = nil;
+    id var = [self valueForKey:elemKey];
     if ([elemKey isEqualToString:@"_barEncode"]) {
-        NSLog(@"%@", [self valueForKey:elemKey]);
+        elem = [NSXMLElement elementWithName:elemKey];
+        [elem setObjectValue:[var stringValue]];
+    }
+    else{
+        if ([elemKey isEqualToString:@"_facials"]) {
+            NSMutableString* facialsStr = [NSMutableString string];
+            [var enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+                [facialsStr appendFormat:@"%@,", [obj stringValue]];
+            }];
+            //  去掉末尾多余的逗号
+            NSString* resultStr = [facialsStr substringWithRange:NSMakeRange(0, facialsStr.length - 1)];
+            
+            elem = [NSXMLElement elementWithName:elemKey];
+            [elem setObjectValue:resultStr];
+        }
+        else{
+            elem = [super elemValueWithElemKey:elemKey];
+        }
     }
     
-    return [super elemValueWithElemKey:elemKey];
+    return elem;
 }
 
 @end
