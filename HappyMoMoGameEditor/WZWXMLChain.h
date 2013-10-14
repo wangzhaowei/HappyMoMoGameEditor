@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import <objc/runtime.h>
 
 //  生成XMLElement的流程就是调用createXMLElement或者createXMLElementWithKey:
 //  其余方法均为策略模式设计或者其他用途。

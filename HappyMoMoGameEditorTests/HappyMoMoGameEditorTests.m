@@ -28,7 +28,7 @@
     NSMutableArray* missions = [NSMutableArray arrayWithCapacity:3u];
     
     for (int i = 0; i < 3; i++) {
-        NSArray* facials = [NSArray arrayWithObject:[NSNumber numberWithInt:i + 1]];
+        NSArray* facials = @[[NSNumber numberWithInt:i + 1]];
         self.mission = [[WZWMission alloc] initWithScore:i + 1
                                               timeLimite:3.0f
                                                  facials:facials
@@ -39,10 +39,11 @@
                                                barEncode:0];
         [missions addObject:self.mission];
     }
+    [missions[0] setTitleImgName:@"touch the left ear"];
+    [missions[1] setTitleImgName:@"touch the right ear"];
+    [missions[2] setTitleImgName:@"touch the left eye"];
     
-    gameData.totalScore[0] = 0.6f;
-    gameData.totalScore[1] = 0.8f;
-    gameData.totalScore[2] = 0.95f;
+    gameData.totalScores = @[@0.6f, @0.8f, @0.95f];
     gameData.missions = missions;
     self.gameData = gameData;
 }

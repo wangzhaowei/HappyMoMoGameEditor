@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6B3B9B01180B98D000C732C8 /* NSNumber+WZWXMLEncode.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B3B9B00180B98D000C732C8 /* NSNumber+WZWXMLEncode.m */; };
+		6B3B9B04180B9C7D00C732C8 /* NSString+WZWXMLEncode.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B3B9B03180B9C7D00C732C8 /* NSString+WZWXMLEncode.m */; };
 		6B6D15FD1809221800A9C2D7 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B6D15FC1809221800A9C2D7 /* Cocoa.framework */; };
 		6B6D16071809221800A9C2D7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6B6D16051809221800A9C2D7 /* InfoPlist.strings */; };
 		6B6D16091809221800A9C2D7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B6D16081809221800A9C2D7 /* main.m */; };
@@ -34,6 +36,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6B3B9AFF180B98D000C732C8 /* NSNumber+WZWXMLEncode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+WZWXMLEncode.h"; sourceTree = "<group>"; };
+		6B3B9B00180B98D000C732C8 /* NSNumber+WZWXMLEncode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+WZWXMLEncode.m"; sourceTree = "<group>"; };
+		6B3B9B02180B9C7D00C732C8 /* NSString+WZWXMLEncode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+WZWXMLEncode.h"; sourceTree = "<group>"; };
+		6B3B9B03180B9C7D00C732C8 /* NSString+WZWXMLEncode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+WZWXMLEncode.m"; sourceTree = "<group>"; };
 		6B6D15F91809221800A9C2D7 /* HappyMoMoGameEditor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HappyMoMoGameEditor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B6D15FC1809221800A9C2D7 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		6B6D15FF1809221800A9C2D7 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -82,6 +88,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6B3B9AFE180B984200C732C8 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				6B3B9AFF180B98D000C732C8 /* NSNumber+WZWXMLEncode.h */,
+				6B3B9B00180B98D000C732C8 /* NSNumber+WZWXMLEncode.m */,
+				6B3B9B02180B9C7D00C732C8 /* NSString+WZWXMLEncode.h */,
+				6B3B9B03180B9C7D00C732C8 /* NSString+WZWXMLEncode.m */,
+			);
+			name = Category;
+			sourceTree = "<group>";
+		};
 		6B6D15F01809221800A9C2D7 = {
 			isa = PBXGroup;
 			children = (
@@ -135,6 +152,7 @@
 				6B6D16111809221800A9C2D7 /* MainMenu.xib */,
 				6B6D16141809221800A9C2D7 /* Images.xcassets */,
 				6B6D16031809221800A9C2D7 /* Supporting Files */,
+				6B3B9AFE180B984200C732C8 /* Category */,
 			);
 			path = HappyMoMoGameEditor;
 			sourceTree = "<group>";
@@ -270,8 +288,10 @@
 			files = (
 				6B6D16091809221800A9C2D7 /* main.m in Sources */,
 				6B6D163D1809337700A9C2D7 /* WZWXMLChain.m in Sources */,
+				6B3B9B01180B98D000C732C8 /* NSNumber+WZWXMLEncode.m in Sources */,
 				6B6D163518092B7E00A9C2D7 /* WZWMission.m in Sources */,
 				6B6D163218092B0F00A9C2D7 /* WZWGameData.m in Sources */,
+				6B3B9B04180B9C7D00C732C8 /* NSString+WZWXMLEncode.m in Sources */,
 				6B6D16101809221800A9C2D7 /* WZWAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -483,6 +503,7 @@
 				6B6D162C1809221900A9C2D7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6B6D162D1809221900A9C2D7 /* Build configuration list for PBXNativeTarget "HappyMoMoGameEditorTests" */ = {
 			isa = XCConfigurationList;
@@ -491,6 +512,7 @@
 				6B6D162F1809221900A9C2D7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

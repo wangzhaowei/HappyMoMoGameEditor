@@ -52,7 +52,13 @@ const int totalScoreCount = 3;
             @throw [NSException exceptionWithName:@"elem error" reason:@"elem ptr is nil" userInfo:nil];
         }
         NSNumber* scoreLevelCountNumber = [self valueForKey:elemKey];
-        [elem setObjectValue:[scoreLevelCountNumber createXMLElement]];
+        if ([scoreLevelCountNumber respondsToSelector:@selector(createXMLElement)]) {
+            elem = [scoreLevelCountNumber createXMLElement];
+        }
+        else{
+            elem = [scoreLevelCountNumber createXMLElementWithKey:@"_scoreLevelCount"];
+        }
+        
         
         return elem;
     }
