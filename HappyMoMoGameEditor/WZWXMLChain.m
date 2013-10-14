@@ -8,25 +8,13 @@
 
 #import "WZWXMLChain.h"
 
-@implementation WZWXMLChain
+@interface WZWXMLChain ()
+//  调用运行时方法自省
+- (NSXMLElement *)createXMLElementWithIvarList:(Ivar*)iVars ivarCount:(NSUInteger)IvarCount rootElement:(NSXMLElement*)rootElem;
 
-- (NSXMLElement *)createXMLElementWithIvarList:(Ivar *)iVars ivarCount:(NSUInteger)IvarCount rootElement:(NSXMLElement *)rootElem
-{
-    if (rootElem == nil) {
-        @throw [NSException exceptionWithName:@"root elem error" reason:@"root elem is nil" userInfo:nil];
-    }
-    
-    for (int i = 0; i < IvarCount; i++) {
-        NSString* elemKey = [NSString stringWithFormat:@"%s", ivar_getName(iVars[i])];
-        if (elemKey == nil || [elemKey isEqualToString:@""]) {
-            @throw [NSException exceptionWithName:@"elem key error" reason:@"elem key is nil" userInfo:nil];
-        }
-        
-        [rootElem addChild:[self elemValueWithElemKey:elemKey]];
-    }
-    
-    return rootElem;
-}
+@end
+
+@implementation WZWXMLChain
 
 - (NSXMLElement*)elemValueWithElemKey:(NSString *)elemKey
 {
@@ -41,15 +29,15 @@
         }
     }
     else{
-        @throw [NSException exceptionWithName:@"object protocol error" reason:@"object isn't a WZWXMLChainEncodeDelegate or subclass" userInfo:nil];
+        @throw WZW_EXCEPTION_NOT_XML_CHAIN_PROTOCOL;
     }
     
     return elem;
 }
 
-- (NSXMLElement *)encodeArrayToXMLElement:(NSArray *)srcArray elementKey:(NSString *)elemKey
+- (NSXMLElement *)encodeArrayToXMLElement:(NSArray *)srcArray rootKey:(NSString *)rootKey elementKey:(NSString *)elemKey
 {
-    NSXMLElement* subroot = [NSXMLElement elementWithName:elemKey];
+    NSXMLElement* subroot = [NSXMLElement elementWithName:rootKey];
     if (subroot == nil) {
         @throw [NSException exceptionWithName:@"subroot error" reason:@"subroot is nil" userInfo:nil];
     }
@@ -91,6 +79,25 @@
     
     free(instanceVar);
     return root;
+}
+
+#pragma mark - Private
+- (NSXMLElement *)createXMLElementWithIvarList:(Ivar *)iVars ivarCount:(NSUInteger)IvarCount rootElement:(NSXMLElement *)rootElem
+{
+    if (rootElem == nil) {
+        @throw [NSException exceptionWithName:@"root elem error" reason:@"root elem is nil" userInfo:nil];
+    }
+    
+    for (int i = 0; i < IvarCount; i++) {
+        NSString* elemKey = [NSString stringWithFormat:@"%s", ivar_getName(iVars[i])];
+        if (elemKey == nil || [elemKey isEqualToString:@""]) {
+            @throw [NSException exceptionWithName:@"elem key error" reason:@"elem key is nil" userInfo:nil];
+        }
+        
+        [rootElem addChild:[self elemValueWithElemKey:elemKey]];
+    }
+    
+    return rootElem;
 }
 
 @end

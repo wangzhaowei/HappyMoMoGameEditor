@@ -8,6 +8,8 @@
 
 #import "WZWMission.h"
 #import <objc/runtime.h>
+#import "NSNumber+WZWXMLEncode.h"
+#import "NSString+WZWXMLEncode.h"
 
 @implementation WZWMission
 
@@ -31,27 +33,38 @@
 
 - (NSXMLElement*)elemValueWithElemKey:(NSString *)elemKey
 {
+    if ([elemKey isEqualToString:@"_obstruction"]) {
+        return [NSXMLElement elementWithName:@"_obstruction"];
+    }
     NSXMLElement* elem = nil;
     id var = [self valueForKey:elemKey];
-    if ([elemKey isEqualToString:@"_barEncode"]) {
-        elem = [NSXMLElement elementWithName:elemKey];
-        [elem setObjectValue:[var stringValue]];
-    }
-    else{
-        if ([elemKey isEqualToString:@"_facials"]) {
-            NSMutableString* facialsStr = [NSMutableString string];
-            [var enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-                [facialsStr appendFormat:@"%@,", [obj stringValue]];
-            }];
-            //  去掉末尾多余的逗号
-            NSString* resultStr = [facialsStr substringWithRange:NSMakeRange(0, facialsStr.length - 1)];
-            
+    if (![var conformsToProtocol:@protocol(WZWXMLChainEncodeDelegate)]) {
+        if ([elemKey isEqualToString:@"_barEncode"]) {
             elem = [NSXMLElement elementWithName:elemKey];
-            [elem setObjectValue:resultStr];
+            [elem setObjectValue:[var stringValue]];
         }
         else{
-            elem = [super elemValueWithElemKey:elemKey];
+            if ([elemKey isEqualToString:@"_facials"]) {
+                elem = [self encodeArrayToXMLElement:self.facials
+                                             rootKey:elemKey
+                                          elementKey:@"_facial"];
+            }
+            else{
+                elem = [super elemValueWithElemKey:elemKey];
+            }
         }
+    }
+    else{
+        if ([var respondsToSelector:@selector(createXMLElement)]) {
+            elem = [var createXMLElement];
+        }
+        else{
+            elem = [var createXMLElementWithKey:elemKey];
+        }
+    }
+    
+    if (elem == nil) {
+        @throw WZW_EXCEPTION_NOT_XML_CHAIN_PROTOCOL;
     }
     
     return elem;

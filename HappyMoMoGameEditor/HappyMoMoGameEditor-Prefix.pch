@@ -6,4 +6,5 @@
 
 #ifdef __OBJC__
     #import <Cocoa/Cocoa.h>
+    #define WZW_EXCEPTION_NOT_XML_CHAIN_PROTOCOL ([NSException exceptionWithName:@"object protocol error" reason:@"object isn't a WZWXMLChainEncodeDelegate or subclass" userInfo:nil])
 #endif

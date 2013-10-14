@@ -7,7 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "WZWXMLChain.h"
 
-@interface NSString (WZWXMLEncode)
+@interface NSString (WZWXMLEncode) <WZWXMLChainEncodeDelegate>
 
 @end

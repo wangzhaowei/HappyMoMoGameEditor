@@ -29,7 +29,7 @@
     
     for (int i = 0; i < 3; i++) {
         NSArray* facials = @[[NSNumber numberWithInt:i + 1]];
-        self.mission = [[WZWMission alloc] initWithScore:i + 1
+        self.mission = [[WZWMission alloc] initWithScore:2
                                               timeLimite:3.0f
                                                  facials:facials
                                                 sequence:NO
@@ -43,7 +43,9 @@
     [missions[1] setTitleImgName:@"touch the right ear"];
     [missions[2] setTitleImgName:@"touch the left eye"];
     
-    gameData.totalScores = @[@0.6f, @0.8f, @0.95f];
+    gameData.totalScores = @[@0.f, @0.6f, @0.8f, @0.95f];
+    gameData.goldRatios = @[@0.f, @0.3f, @0.6f, @1.2f];
+    gameData.scoreLevelCount = 4;
     gameData.missions = missions;
     self.gameData = gameData;
 }

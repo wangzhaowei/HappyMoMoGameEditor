@@ -26,14 +26,12 @@
 
 @property (strong) NSString* rootKey;
 
-//  策略模式，可以在子类中重载这个方法，修改xml文件格式
-- (NSXMLElement *)createXMLElementWithIvarList:(Ivar*)iVars ivarCount:(NSUInteger)IvarCount rootElement:(NSXMLElement*)rootElem;
-
 //  返回实例变量的XML元素, 如果变量是NSArray则还会检测数组中元素是否是Chain
+//  对于直接继承自Chain类的类,只要重载这个方法即可,可省去重载协议方法
 - (NSXMLElement*)elemValueWithElemKey:(NSString*)elemKey;
 
-//  解析数组，数组中必须是NSNumber数据，多个数据之间只用逗号分隔，且数组中元素必须使用同一个key.
+//  解析数组，数组中必须是NSNumber数据，且数组中元素必须使用同一个key.
 //  数组中元素必须实现WZWXMLChainEncodeDelegate协议
-- (NSXMLElement*)encodeArrayToXMLElement:(NSArray*)srcArray elementKey:(NSString*)elemKey;
+- (NSXMLElement*)encodeArrayToXMLElement:(NSArray*)srcArray rootKey:(NSString*)rootKey elementKey:(NSString*)elemKey;
 
 @end

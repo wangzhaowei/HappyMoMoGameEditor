@@ -141,6 +141,7 @@
 		6B6D16021809221800A9C2D7 /* HappyMoMoGameEditor */ = {
 			isa = PBXGroup;
 			children = (
+				6B3B9AFE180B984200C732C8 /* Category */,
 				6B6D160E1809221800A9C2D7 /* WZWAppDelegate.h */,
 				6B6D160F1809221800A9C2D7 /* WZWAppDelegate.m */,
 				6B6D163B1809337700A9C2D7 /* WZWXMLChain.h */,
@@ -152,7 +153,6 @@
 				6B6D16111809221800A9C2D7 /* MainMenu.xib */,
 				6B6D16141809221800A9C2D7 /* Images.xcassets */,
 				6B6D16031809221800A9C2D7 /* Supporting Files */,
-				6B3B9AFE180B984200C732C8 /* Category */,
 			);
 			path = HappyMoMoGameEditor;
 			sourceTree = "<group>";

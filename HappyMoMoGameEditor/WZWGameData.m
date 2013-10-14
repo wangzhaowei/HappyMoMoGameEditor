@@ -9,8 +9,6 @@
 #import "WZWGameData.h"
 #import "NSNumber+WZWXMLEncode.h"
 
-const int totalScoreCount = 3;
-
 @implementation WZWGameData
 
 - (id)init
@@ -18,6 +16,9 @@ const int totalScoreCount = 3;
     self = [super init];
     if (self) {
         _scoreLevelCount = 0;
+#ifdef DEBUG
+        _scoreLevelCount = 4;
+#endif
         _totalScores = nil;
         
         self.rootKey = @"gameData";
@@ -28,42 +29,35 @@ const int totalScoreCount = 3;
 - (NSXMLElement *)elemValueWithElemKey:(NSString *)elemKey
 {
     NSXMLElement* elem = nil;
-    if ([elemKey isEqualToString:@"_missions"] || [elemKey isEqualToString:@"_totalScores"]) {
+    id var = [self valueForKey:elemKey];
+    if ([elemKey isEqualToString:@"_scoreLevelCount"]) {
+        if ([var respondsToSelector:@selector(createXMLElement)]) {
+            elem = [var createXMLElement];
+        }
+        else{
+            elem = [var createXMLElementWithKey:@"_scoreLevelCount"];
+        }
+    }
+    else{
         //  舍弃字符串最后的s
         NSString* subElemKey = [elemKey substringWithRange:NSMakeRange(0, elemKey.length - 1)];
         @try {
-            elem = [self encodeArrayToXMLElement:self.missions
+            elem = [self encodeArrayToXMLElement:var
+                                         rootKey:elemKey
                                       elementKey:subElemKey];
+            NSLog(@"%@", [elem description]);
         }
         @catch (NSException *exception) {
-            NSLog(@"%@", [exception description]);
-            elem = nil;
+            elem = [super elemValueWithElemKey:elemKey];
+            if (elem == nil) {
+                @throw exception;
+            }
         }
         @finally {
-            elem = nil;
         }
-        
-        return elem;
     }
     
-    if ([elemKey isEqualToString:@"_scoreLevelCount"]) {
-        elem = [NSXMLElement elementWithName:elemKey];
-        if (elem == nil) {
-            @throw [NSException exceptionWithName:@"elem error" reason:@"elem ptr is nil" userInfo:nil];
-        }
-        NSNumber* scoreLevelCountNumber = [self valueForKey:elemKey];
-        if ([scoreLevelCountNumber respondsToSelector:@selector(createXMLElement)]) {
-            elem = [scoreLevelCountNumber createXMLElement];
-        }
-        else{
-            elem = [scoreLevelCountNumber createXMLElementWithKey:@"_scoreLevelCount"];
-        }
-        
-        
-        return elem;
-    }
-    
-    return [super elemValueWithElemKey:elemKey];
+    return elem;
 }
 
 @end
