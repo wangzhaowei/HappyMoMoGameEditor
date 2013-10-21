@@ -25,9 +25,9 @@
     // Put setup code here. This method is called before the invocation of each test method in the class.
     WZWGameData* gameData = [[WZWGameData alloc] init];
     
-    NSMutableArray* missions = [NSMutableArray arrayWithCapacity:3u];
+    NSMutableArray* missions = [NSMutableArray array];
     
-    for (int i = 0; i < 3; i++) {
+    for (int i = 0; i < 5; i++) {
         NSArray* facials = @[[NSNumber numberWithInt:i + 1]];
         self.mission = [[WZWMission alloc] initWithScore:2
                                               timeLimite:3.0f
@@ -37,16 +37,20 @@
                                              obstruction:nil
                                                titleFile:@"sampleImg.png"
                                                barEncode:0];
+        self.mission.obstructions = @[@0];
         [missions addObject:self.mission];
     }
     [missions[0] setTitleImgName:@"touch the left ear"];
     [missions[1] setTitleImgName:@"touch the right ear"];
     [missions[2] setTitleImgName:@"touch the left eye"];
+    [missions[3] setTitleImgName:@"touch the right eye"];
+    [missions[4] setTitleImgName:@"touch the nose"];
     
     gameData.totalScores = @[@0.f, @0.6f, @0.8f, @0.95f];
     gameData.goldRatios = @[@0.f, @0.3f, @0.6f, @1.2f];
     gameData.scoreLevelCount = 4;
     gameData.missions = missions;
+    gameData.missionHelps = @[@0, @1, @2];
     self.gameData = gameData;
 }
 

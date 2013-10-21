@@ -14,9 +14,9 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
     // Insert code here to initialize your application
+    if (self.gameDataController) {
+        [self.gameDataController becomeFirstResponder];
+    }
 }
 
-- (IBAction)fileMenuCallBack:(id)sender {
-    NSLog(@"%ld", [sender tag]);
-}
 @end

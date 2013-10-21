@@ -8,6 +8,13 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface WZWGameDataViewController : NSViewController
+@class WZWGameData;
+@interface WZWGameDataViewController : NSViewController <NSTableViewDataSource, NSTableViewDelegate>
+
+@property (strong) WZWGameData* gameData;
+@property (weak) IBOutlet NSTableView* missionsTable;
+
+- (IBAction)fileMenuCallBack:(id)sender;
+- (IBAction)printValue:(id)sender;
 
 @end

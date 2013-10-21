@@ -13,6 +13,24 @@
 
 @implementation WZWMission
 
+- (id)init
+{
+    if (self = [super init]) {
+        _score = 0.f;
+        _timeLimite = 0.f;
+        _facials = nil;
+        _sequence = NO;
+        _totalCount = 0;
+        _obstructions = nil;
+        _titleImgName = nil;
+        _barEncode = 0u;
+        
+        self.rootKey = @"_mission";
+    }
+    
+    return self;
+}
+
 - (id)initWithScore:(float)score timeLimite:(float)timeLimite facials:(NSArray *)facials sequence:(BOOL)sequence totalCount:(int)totalCount obstruction:(NSArray *)obstruction titleFile:(NSString *)titleFileName barEncode:(NSUInteger)barEncode
 {
     self = [super init];

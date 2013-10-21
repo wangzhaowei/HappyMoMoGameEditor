@@ -33,7 +33,7 @@ typedef enum : NSUInteger
 @property (strong) NSArray* obstructions;
 //  题目提示标题的图片名称
 @property (strong) NSString* titleImgName;
-//  标题栏上三个小小的气泡, 是枚举量barTitleEnum
+//  标题栏上三个小小的气泡, 是枚举量barTitleEnum按位与、或的结果
 @property (assign) NSUInteger barEncode;
 
 - (id)initWithScore:(float)score timeLimite:(float)timeLimite facials:(NSArray*)facials sequence:(BOOL)sequence totalCount:(int)totalCount obstruction:(NSArray*)obstruction titleFile:(NSString*)titleFileName barEncode:(NSUInteger)barEncode;

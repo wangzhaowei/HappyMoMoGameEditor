@@ -11,7 +11,6 @@
 @interface WZWAppDelegate : NSObject <NSApplicationDelegate>
 
 @property (assign) IBOutlet NSWindow *window;
-
-- (IBAction)fileMenuCallBack:(id)sender;
+@property (strong) IBOutlet NSViewController* gameDataController;
 
 @end

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		6B3B9B01180B98D000C732C8 /* NSNumber+WZWXMLEncode.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B3B9B00180B98D000C732C8 /* NSNumber+WZWXMLEncode.m */; };
 		6B3B9B04180B9C7D00C732C8 /* NSString+WZWXMLEncode.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B3B9B03180B9C7D00C732C8 /* NSString+WZWXMLEncode.m */; };
+		6B5E5AD518141CF500F2F2B9 /* WZWGameDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B5E5AD418141CF500F2F2B9 /* WZWGameDataViewController.m */; };
 		6B6D15FD1809221800A9C2D7 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B6D15FC1809221800A9C2D7 /* Cocoa.framework */; };
 		6B6D16071809221800A9C2D7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6B6D16051809221800A9C2D7 /* InfoPlist.strings */; };
 		6B6D16091809221800A9C2D7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B6D16081809221800A9C2D7 /* main.m */; };
@@ -40,6 +41,8 @@
 		6B3B9B00180B98D000C732C8 /* NSNumber+WZWXMLEncode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+WZWXMLEncode.m"; sourceTree = "<group>"; };
 		6B3B9B02180B9C7D00C732C8 /* NSString+WZWXMLEncode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+WZWXMLEncode.h"; sourceTree = "<group>"; };
 		6B3B9B03180B9C7D00C732C8 /* NSString+WZWXMLEncode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+WZWXMLEncode.m"; sourceTree = "<group>"; };
+		6B5E5AD318141CF500F2F2B9 /* WZWGameDataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WZWGameDataViewController.h; sourceTree = "<group>"; };
+		6B5E5AD418141CF500F2F2B9 /* WZWGameDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WZWGameDataViewController.m; sourceTree = "<group>"; };
 		6B6D15F91809221800A9C2D7 /* HappyMoMoGameEditor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HappyMoMoGameEditor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B6D15FC1809221800A9C2D7 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		6B6D15FF1809221800A9C2D7 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -99,6 +102,17 @@
 			name = Category;
 			sourceTree = "<group>";
 		};
+		6B5E5AD718141D0300F2F2B9 /* GameData */ = {
+			isa = PBXGroup;
+			children = (
+				6B6D163018092B0F00A9C2D7 /* WZWGameData.h */,
+				6B6D163118092B0F00A9C2D7 /* WZWGameData.m */,
+				6B5E5AD318141CF500F2F2B9 /* WZWGameDataViewController.h */,
+				6B5E5AD418141CF500F2F2B9 /* WZWGameDataViewController.m */,
+			);
+			name = GameData;
+			sourceTree = "<group>";
+		};
 		6B6D15F01809221800A9C2D7 = {
 			isa = PBXGroup;
 			children = (
@@ -146,8 +160,7 @@
 				6B6D160F1809221800A9C2D7 /* WZWAppDelegate.m */,
 				6B6D163B1809337700A9C2D7 /* WZWXMLChain.h */,
 				6B6D163C1809337700A9C2D7 /* WZWXMLChain.m */,
-				6B6D163018092B0F00A9C2D7 /* WZWGameData.h */,
-				6B6D163118092B0F00A9C2D7 /* WZWGameData.m */,
+				6B5E5AD718141D0300F2F2B9 /* GameData */,
 				6B6D163318092B7E00A9C2D7 /* WZWMission.h */,
 				6B6D163418092B7E00A9C2D7 /* WZWMission.m */,
 				6B6D16111809221800A9C2D7 /* MainMenu.xib */,
@@ -287,6 +300,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6B6D16091809221800A9C2D7 /* main.m in Sources */,
+				6B5E5AD518141CF500F2F2B9 /* WZWGameDataViewController.m in Sources */,
 				6B6D163D1809337700A9C2D7 /* WZWXMLChain.m in Sources */,
 				6B3B9B01180B98D000C732C8 /* NSNumber+WZWXMLEncode.m in Sources */,
 				6B6D163518092B7E00A9C2D7 /* WZWMission.m in Sources */,
