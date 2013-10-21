@@ -30,7 +30,7 @@ typedef enum : NSUInteger
 //  需要触摸的次数, 当[facials count]为1的时候才有效果
 @property (assign) int totalCount;
 //  障碍物, 现在还没用
-@property (strong) NSArray* obstruction;
+@property (strong) NSArray* obstructions;
 //  题目提示标题的图片名称
 @property (strong) NSString* titleImgName;
 //  标题栏上三个小小的气泡, 是枚举量barTitleEnum

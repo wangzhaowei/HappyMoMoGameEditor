@@ -22,19 +22,21 @@
         _facials = facials;
         _sequence = sequence;
         _totalCount = totalCount;
-        _obstruction = [obstruction copy];
+        _obstructions = [obstruction copy];
         _titleImgName = titleFileName;
         _barEncode = barEncode;
         
-        self.rootKey = @"mission";
+        self.rootKey = @"_mission";
     }
     return self;
 }
 
 - (NSXMLElement*)elemValueWithElemKey:(NSString *)elemKey
 {
-    if ([elemKey isEqualToString:@"_obstruction"]) {
-        return [NSXMLElement elementWithName:@"_obstruction"];
+    if ([elemKey isEqualToString:@"_obstructions"]) {
+        return [self encodeArrayToXMLElement:self.obstructions
+                                     rootKey:elemKey
+                                  elementKey:[elemKey substringToIndex:elemKey.length - 1]];
     }
     NSXMLElement* elem = nil;
     id var = [self valueForKey:elemKey];

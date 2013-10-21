@@ -45,15 +45,14 @@
             elem = [self encodeArrayToXMLElement:var
                                          rootKey:elemKey
                                       elementKey:subElemKey];
-            NSLog(@"%@", [elem description]);
         }
         @catch (NSException *exception) {
             elem = [super elemValueWithElemKey:elemKey];
-            if (elem == nil) {
-                @throw exception;
-            }
         }
         @finally {
+            if (elem == nil) {
+                @throw WZW_EXCEPTION_NOT_XML_CHAIN_PROTOCOL;
+            }
         }
     }
     

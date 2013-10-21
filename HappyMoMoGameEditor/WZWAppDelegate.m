@@ -14,20 +14,6 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
     // Insert code here to initialize your application
-
-//    NSXMLElement* elem = [NSXMLNode elementWithName:@"test"];
-//    [elem setObjectValue:@"123123"];
-//    
-//    NSXMLElement* childElem = [NSXMLElement elementWithName:@"subTest"];
-//    [childElem setObjectValue:@"child"];
-//    [elem addChild:childElem];
-//    
-//    NSXMLDocument *xmlDoc = [[NSXMLDocument alloc] initWithRootElement:elem];
-//    [xmlDoc setVersion:@"1.0"];
-//    [xmlDoc setCharacterEncoding:@"UTF-8"];
-//    
-//    NSData *xmlData = [xmlDoc XMLDataWithOptions:NSXMLNodePrettyPrint];
-//    [xmlData writeToFile:[NSHomeDirectory() stringByAppendingString:@"/test.xml"] atomically:YES];
 }
 
 - (IBAction)fileMenuCallBack:(id)sender {
